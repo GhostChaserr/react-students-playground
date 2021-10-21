@@ -35,6 +35,12 @@
   background-color: goldenrod;
 }
 
+.cards__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

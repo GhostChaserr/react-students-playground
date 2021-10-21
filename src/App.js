@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react'
+import Nav from './components/Nav/Nav'
+import Header from './components/Header/Header';
+import Card from './components/Card/Card'
+import Footer from './components/Footer/Footer';
 
 // 2 ტიპის კომპონენტი გვაქვს
 // 1. class based კომპონენტი, სადაც react class ვიყენებთ
@@ -41,14 +45,14 @@ function App3(){
 }
 
 
-function Nav(){
-  return (
-    <div className='container'>
-      Nav component!
-      <App2 />
-    </div>
-  )
-}
+// function Nav(){
+//   return (
+//     <div className='container'>
+//       Nav component!
+//       <App2 />
+//     </div>
+//   )
+// }
 
 function StyledComponent(){
   return (
@@ -73,17 +77,64 @@ function StyledComponent(){
 //   )
 // }
 
-function Root(){
+// function Root(){
+//   return (
+//     <>
+//       <Nav />
+//       <StyledComponent />
+//     </>
+//   )
+// }
+
+
+const App = () => {
+  const renderCards = () => {
+    let cards = new Array(9).fill(9).map((index, value) => ({ key: 'card' }));
+    return cards.map((index, value) => <Card key={index} />)
+  } 
+
+
+  // Prop data types
+  // String
+  // Integer
+  // Object
+  // Array
+  // Boolean
+
+  const lang = 'en'
+  const navContent = {
+    navName: "Navigation",
+    dropDown: {
+      actionOne: "Click details",
+      actionTwo: "Open popup",
+      dropDownDisabledLink: "Disabled"
+    },
+    search: "Type in to search"
+  }
+
+  const navContentGe = {
+    navName: "ნავიგაცია",
+    dropDown: {
+      actionOne: "დეტალების გახსნა",
+      actionTwo: "ფოფაფის გახსნა",
+      dropDownDisabledLink: "ლინკი გათიშულია"
+    },
+    search: "Type in to search"
+  }
+  const content = lang === 'ge' ? navContentGe : navContent;
+
+  const tags = ['Product', 'News', 'Tech']
+
   return (
     <>
-      <Nav />
-      <StyledComponent />
+      <Nav content={content} /> 
+      <Header tags={tags} isButtonsShown={false}  />
+      <div className='cards__body'>
+        {renderCards()} 
+      </div>
+      <Footer />
     </>
   )
 }
 
-export default Root;
-
-
-
-// გაგვაქვს გარეთ app3
+export default App
