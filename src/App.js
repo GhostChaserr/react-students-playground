@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav'
 import Header from './components/Header/Header';
 import Card from './components/Card/Card'
 import Footer from './components/Footer/Footer';
+import Events from './components/Events/Events';
 
 // 2 ტიპის კომპონენტი გვაქვს
 // 1. class based კომპონენტი, სადაც react class ვიყენებთ
@@ -127,12 +128,13 @@ const App = () => {
 
   return (
     <>
-      <Nav content={content} /> 
+      {/* <Nav content={content} /> 
       <Header tags={tags} isButtonsShown={false}  />
       <div className='cards__body'>
         {renderCards()} 
       </div>
-      <Footer />
+      <Footer /> */}
+      <Events/>
     </>
   )
 }
