@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css'
 import { Component } from 'react'
 import Nav from './components/Nav/Nav'
 import Header from './components/Header/Header';
 import Card from './components/Card/Card'
 import Footer from './components/Footer/Footer';
 import Events from './components/Events/Events';
+import Routing from './components/Routing';
+import Todos from './components/Todos/Todos'
+import UI from './components/UI/UI'
 
 // 2 ტიპის კომპონენტი გვაქვს
 // 1. class based კომპონენტი, სადაც react class ვიყენებთ
@@ -134,7 +138,10 @@ const App = () => {
         {renderCards()} 
       </div>
       <Footer /> */}
-      <Events/>
+      {/* <Events/> */}
+      {/* <Routing/> */}
+      {/* <Todos/> */}
+      <UI/>
     </>
   )
 }
