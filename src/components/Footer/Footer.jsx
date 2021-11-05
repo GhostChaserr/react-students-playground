@@ -1,5 +1,4 @@
 import React from "react";
-
 const Footer = () => {
   return (
     <footer className="row row-cols-5 py-5 my-5 border-top">
@@ -9,11 +8,8 @@ const Footer = () => {
       </a>
       <p className="text-muted">&copy; 2021</p>
     </div>
-
     <div className="col">
-
     </div>
-
     <div className="col">
       <h5>Section</h5>
       <ul className="nav flex-column">
@@ -24,7 +20,6 @@ const Footer = () => {
         <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
       </ul>
     </div>
-
     <div className="col">
       <h5>Section</h5>
       <ul className="nav flex-column">
@@ -35,7 +30,6 @@ const Footer = () => {
         <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
       </ul>
     </div>
-
     <div className="col">
       <h5>Section</h5>
       <ul className="nav flex-column">

@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css'
 import { Component } from 'react'
 import Nav from './components/Nav/Nav'
 import Header from './components/Header/Header';
@@ -10,6 +11,9 @@ import Hooks from './components/Hooks/Hooks';
 import Signup from './components/Signup/Signup';
 // import Hooks from './components/Hooks/Hooks';
 // Hooks
+import Routing from './components/Routing';
+import Todos from './components/Todos/Todos'
+import UI from './components/UI/UI'
 
 // 2 ტიპის კომპონენტი გვაქვს
 // 1. class based კომპონენტი, სადაც react class ვიყენებთ
@@ -141,6 +145,9 @@ const App = () => {
       {/* <Events/> */}
       {/* <Hooks /> */}
       <Signup/>
+      {/* <Routing/> */}
+      {/* <Todos/> */}
+      <UI/>
     </>
   )
 }
