@@ -48,6 +48,24 @@ const Events = () => {
     // []
     // [1]
     // [...[1, 2, 3], ...[], ..[1]]
+
+    // 1. Mutation 
+    // ორიგინალი მნიშვნელობის შეცვლას, გადაწერას
+    const obj = {
+      key: 1
+    }
+    obj.key = 2;
+
+    // 2. Transformation
+    // ძველს არ ვეხებით, ვიღებთ ძველის მნიშვნელობას, ვამატებთ ახალს, გადრდავქმნით
+    // ახლა მნიშვნელობად.
+    // const updated = { ...obj, key2: 2 };
+    // text = 'axal texts'
+    // const updated = text + 'text updated'
+    // setText(updated)
+
+
+
     setTodos([...todos, todo]);
   }
 
@@ -123,11 +141,11 @@ const Events = () => {
       <h1>{text}</h1> */}
 
       {/* 3 */}
-      {/* <div>
+      <div>
         <h1>{finalText}</h1>
         <input onChange={handleType} type="text" value={text} />
         <button onClick={handleShowText}> Show text </button>
-      </div> */}
+      </div>
 
       {/* 4 */}
       {/* <div>
@@ -150,7 +168,7 @@ const Events = () => {
         )}
       </div> */}
 
-      {/* <div>
+      <div>
         <h1> სამუშაოების რაოდენობა {todos.length} </h1>
         <form onSubmit={handleSubmit}>
           <input value={text} onChange={handleType} type="text" />
@@ -166,7 +184,7 @@ const Events = () => {
             ))}
           </ul>
         </div>
-      </div> */}
+      </div>
 
       <div>
         {error && <p>{error}</p>}

@@ -6,6 +6,10 @@ import Header from './components/Header/Header';
 import Card from './components/Card/Card'
 import Footer from './components/Footer/Footer';
 import Events from './components/Events/Events';
+import Hooks from './components/Hooks/Hooks';
+import Signup from './components/Signup/Signup';
+// import Hooks from './components/Hooks/Hooks';
+// Hooks
 
 // 2 ტიპის კომპონენტი გვაქვს
 // 1. class based კომპონენტი, სადაც react class ვიყენებთ
@@ -134,7 +138,9 @@ const App = () => {
         {renderCards()} 
       </div>
       <Footer /> */}
-      <Events/>
+      {/* <Events/> */}
+      {/* <Hooks /> */}
+      <Signup/>
     </>
   )
 }
